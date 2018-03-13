@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="UserInfo" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <cacheModels>
+    <cacheModel id="UserInfo-cache" implementation="LRU">
+      <flushInterval hours="24"/>
+      <property name="size" value="1000" />
+    </cacheModel>
+  </cacheModels>
+  <alias>
+    <typeAlias alias="UserInfo" type="XJTU.Model.UserInfo,XJTU.Model"></typeAlias>
+  </alias>
+  <resultMaps>
+    <resultMap id="UserInfo-Result" class="UserInfo">
+      <result property="id" column="id"/>
+      <result property="UserName" column="UserName"/>
+      <result property="PassWord" column="PassWord"/>
+      <result property="Email" column="Email"/>
+      <result property="Phone" column="Phone"/>
+      <result property="IsDel" column="IsDel"/>
+      <result property="CreateTime" column="CreateTime"/>
+    </resultMap>
+  </resultMaps>
+  <statements>
+    <insert id="insert" parameterClass="UserInfo" resultClass="int">
+      <![CDATA[insert into userinfo(UserName,PassWord,Email,Phone,IsDel,CreateTime) values (#UserName#,#PassWord#,#Email#,#Phone#,#IsDel#,#CreateTime#)]]>
+      <selectKey type="post" resultClass="int" property="id" >
+        select LAST_INSERT_ID() as id
+      </selectKey>
+    </insert>
+   
+
+    <select id="list" parameterClass="hashtable" resultClass="UserInfo">
+      SELECT * FROM userinfo A where A.IsDel=0 and A.username=#username# and A.password=#password# and A.isdel=0
+    </select>
+    <select id="singleselect" parameterClass="hashtable" resultClass="UserInfo">
+      SELECT * FROM userinfo A where A.username=#username#
+    </select>
+  </statements>
+
+</sqlMap>

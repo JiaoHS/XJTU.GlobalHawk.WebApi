@@ -1,0 +1,16 @@
+F:\gps\XJTUWeb\XJTU\TestApi\bin\Debug\TestApi.exe.config
+F:\gps\XJTUWeb\XJTU\TestApi\bin\Debug\TestApi.exe
+F:\gps\XJTUWeb\XJTU\TestApi\bin\Debug\TestApi.pdb
+F:\gps\XJTUWeb\XJTU\TestApi\obj\Debug\TestApi.exe
+F:\gps\XJTUWeb\XJTU\TestApi\obj\Debug\TestApi.pdb
+E:\xjtuGPS\XJTU\TestApi\bin\Debug\TestApi.exe.config
+E:\xjtuGPS\XJTU\TestApi\bin\Debug\TestApi.exe
+E:\xjtuGPS\XJTU\TestApi\bin\Debug\TestApi.pdb
+E:\xjtuGPS\XJTU\TestApi\obj\Debug\TestApi.csprojResolveAssemblyReference.cache
+E:\xjtuGPS\XJTU\TestApi\obj\Debug\TestApi.exe
+E:\xjtuGPS\XJTU\TestApi\obj\Debug\TestApi.pdb
+E:\全球鹰\XJTU\TestApi\bin\Debug\TestApi.exe.config
+E:\全球鹰\XJTU\TestApi\bin\Debug\TestApi.exe
+E:\全球鹰\XJTU\TestApi\bin\Debug\TestApi.pdb
+E:\全球鹰\XJTU\TestApi\obj\Debug\TestApi.exe
+E:\全球鹰\XJTU\TestApi\obj\Debug\TestApi.pdb

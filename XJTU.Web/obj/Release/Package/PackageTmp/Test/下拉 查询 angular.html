@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/css/comboselect.css" rel="stylesheet" />
+    <link href="Content/css/index.css" rel="stylesheet" />
+    <link href="Content/css/select2.css" rel="stylesheet" />
+    <link href="Content/css/select2-bootstrap.css" rel="stylesheet" />
+  
+</head>
+<body ng-controller="appCtrl">
+    <h4>2. 支持select标签</h4>
+    <span class="text-muted">ng-model:</span> {{ b }}
+    <br />
+    <select select2 ng-model="b" class="form-control" placeholder="我也有placeholder">
+        <option value="1">数据1</option>
+        <option value="2">数据2</option>
+        <option value="3">数据3</option>
+        <option value="4">数据4</option>
+        <option value="{{ item.id }}" ng-repeat="item in config2">{{ item.text }}</option>
+    </select>
+    <br />
+    <button ng-click="b = 3" class="btn btn-success btn-sm pull-right">设置数据</button>
+    <span class="clearfix"></span>
+    <hr />
+    <script src="Content/js/jquery-1.11.0.min.js"></script>
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="Content/js/select2.min.js"></script>
+    <script src="Content/js/index.js"></script>
+</body>
+</html>

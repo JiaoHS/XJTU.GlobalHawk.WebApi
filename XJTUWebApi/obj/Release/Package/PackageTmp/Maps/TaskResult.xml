@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="TaskResult" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <cacheModels>
+    <cacheModel id="TaskResult-cache" implementation="LRU">
+      <flushInterval hours="24"/>
+      <property name="size" value="1000" />
+    </cacheModel>
+  </cacheModels>
+  <alias>
+    <typeAlias alias="TaskResult" type="XJTU.Model.TaskResult,XJTU.Model"></typeAlias>
+  </alias>
+  <resultMaps>
+    <resultMap id="TaskResult-Result" class="TaskResult">
+      <result property="Time" column="Time"/>
+      <result property="Source" column="Source"/>
+      <result property="Destination" column="Destination"/>
+      <result property="Link" column="Link"/>
+    </resultMap>
+  </resultMaps>
+  <statements>
+    <select id="list" parameterClass="hashtable" resultClass="TaskResult">
+      <![CDATA[ 
+       select *
+      from (select row_number() over(order by tmp.Time) as row,*
+      from (select * from $tableName$ ) tmp) temp
+      where temp.row between #startIndex# and #pageSize#]]>
+    </select>
+  </statements>
+
+</sqlMap>
+

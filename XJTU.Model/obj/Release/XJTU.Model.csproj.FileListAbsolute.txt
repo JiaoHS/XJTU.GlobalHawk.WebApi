@@ -1,0 +1,13 @@
+F:\gps\XJTUWeb\XJTU\XJTU.Model\bin\Release\XJTU.Model.dll
+F:\gps\XJTUWeb\XJTU\XJTU.Model\bin\Release\XJTU.Model.pdb
+F:\gps\XJTUWeb\XJTU\XJTU.Model\obj\Release\XJTU.Model.dll
+F:\gps\XJTUWeb\XJTU\XJTU.Model\obj\Release\XJTU.Model.pdb
+E:\xjtuGPS\XJTU\XJTU.Model\bin\Release\XJTU.Model.dll
+E:\xjtuGPS\XJTU\XJTU.Model\bin\Release\XJTU.Model.pdb
+E:\xjtuGPS\XJTU\XJTU.Model\obj\Release\XJTU.Model.dll
+E:\xjtuGPS\XJTU\XJTU.Model\obj\Release\XJTU.Model.pdb
+E:\全球鹰\XJTU\XJTU.Model\bin\Release\XJTU.Model.dll
+E:\全球鹰\XJTU\XJTU.Model\bin\Release\XJTU.Model.pdb
+E:\全球鹰\XJTU\XJTU.Model\obj\Release\XJTU.Model.dll
+E:\全球鹰\XJTU\XJTU.Model\obj\Release\XJTU.Model.pdb
+E:\全球鹰\XJTU\XJTU.Model\obj\Release\XJTU.Model.csprojResolveAssemblyReference.cache

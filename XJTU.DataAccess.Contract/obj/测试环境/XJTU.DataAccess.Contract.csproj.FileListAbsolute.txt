@@ -1,0 +1,7 @@
+E:\全球鹰\XJTU\XJTU.DataAccess.Contract\bin\测试环境\XJTU.DataAccess.Contract.dll
+E:\全球鹰\XJTU\XJTU.DataAccess.Contract\bin\测试环境\XJTU.DataAccess.Contract.pdb
+E:\全球鹰\XJTU\XJTU.DataAccess.Contract\bin\测试环境\XJTU.Model.dll
+E:\全球鹰\XJTU\XJTU.DataAccess.Contract\bin\测试环境\XJTU.Model.pdb
+E:\全球鹰\XJTU\XJTU.DataAccess.Contract\obj\测试环境\XJTU.DataAccess.Contract.csprojResolveAssemblyReference.cache
+E:\全球鹰\XJTU\XJTU.DataAccess.Contract\obj\测试环境\XJTU.DataAccess.Contract.dll
+E:\全球鹰\XJTU\XJTU.DataAccess.Contract\obj\测试环境\XJTU.DataAccess.Contract.pdb

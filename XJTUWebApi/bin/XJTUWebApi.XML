@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XJTUWebApi</name>
+    </assembly>
+    <members>
+        <member name="M:XJTUWebApi.SwaggerConfig.CachingSwaggerProvider.GetControllerDesc">
+            <summary>
+            ´ÓAPIÎÄµµÖÐ¶ÁÈ¡¿ØÖÆÆ÷ÃèÊö
+            </summary>
+            <returns>ËùÓÐ¿ØÖÆÆ÷ÃèÊö</returns>
+        </member>
+        <member name="T:XJTUWebApi.Controllers.TaskController">
+            <summary>
+            任务控制器
+            </summary>
+        </member>
+        <member name="M:XJTUWebApi.Controllers.TaskController.#ctor">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:XJTUWebApi.Controllers.TaskController.GetTaskTableInfo(System.Int32,System.Int32)">
+            <summary>
+            获取所有task列表(分页)
+            </summary>
+            <param name="startIndex">第几页</param>
+            <param name="pageSize">每页大小个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:XJTUWebApi.Controllers.TaskController.InsertGetTaskTable(System.String)">
+            <summary>
+            插入数据
+            </summary>
+            <param name="jsonModel">拼接成的json串jsonModel: JSON.stringify({ ID: "1",ID: "1"})</param>
+            <returns></returns>
+        </member>
+        <member name="M:XJTUWebApi.Controllers.TaskController.GetSensorById(System.Int32,System.Int32)">
+            <summary>
+            通过id获取Sensor(分页)
+            </summary>
+            <param name="startIndex">第几页</param>
+            <param name="pageSize">每页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:XJTUWebApi.Controllers.TaskController.TaskResultList(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取任务结果集合
+            </summary>
+            <param name="pageIndex">第几页</param>
+            <param name="pageSize">每页大小</param>
+            <param name="tableIndex">表的索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:XJTUWebApi.Ioc.ControllerRegister.Regist">
+            <summary>
+            注册控制器
+            </summary>
+        </member>
+    </members>
+</doc>

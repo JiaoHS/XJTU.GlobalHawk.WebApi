@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/comboselect.css" rel="stylesheet" />
+    <link href="css/selectpage.base.css" rel="stylesheet" />
+    <link href="css/selectpage.bootstrap3.css" rel="stylesheet" />
+    <link href="css/selectpage.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/comboselect.js"></script>
+    <script src="js/comboselect.min.js"></script>
+    <script src="js/b.comboselect.js"></script>
+    <script src="js/selectpage.js"></script>
+    <script src="js/selectpage.min.js"></script>
+</head>
+<body>
+    <!--//表单声明元素-->
+    <input type="text" id="selectPage">
+
+    <script type="text/javascript">
+      
+        //定义数组，在服务端返回的数据也以该格式返回：Array[{Object},{...}]
+        var tag_data = [
+            {id:1 ,name:'Chicago Bulls',desc:'芝加哥公牛'},
+            {id:2 ,name:'Cleveland Cavaliers',desc:'克里夫兰骑士'},
+            {id:3 ,name:'Detroit Pistons',desc:'底特律活塞'},
+            { id: 4, name: 'Indiana Pacers', desc: '印第安纳步行者' },
+             { id: 5, name: 'Chicago Bulls', desc: '芝加哥公牛' },
+            { id: 6, name: 'Cleveland Cavaliers', desc: '克里夫兰骑士' },
+            { id: 7, name: 'Detroit Pistons', desc: '底特律活塞' },
+            { id: 8, name: 'Indiana Pacers', desc: '印第安纳步行者' }
+        ];
+        //showField：设置下拉列表中显示文本的列
+        //keyField：设置下拉列表项目中项目的KEY值，用于提交表单
+        //data：数据源，可以是JSON数据格式，也可以是URL
+        $('#selectPage').selectPage({
+            showField : 'desc',
+            keyField: 'id',
+            //设置每页显示记录数
+            pageSize: 5,
+            data : tag_data
+        });
+    </script>
+</body>
+</html>

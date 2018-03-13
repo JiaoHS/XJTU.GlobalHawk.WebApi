@@ -1,0 +1,7 @@
+E:\全球鹰\XJTU\XJTU.Service.Contract\bin\测试环境\XJTU.Service.Contract.dll
+E:\全球鹰\XJTU\XJTU.Service.Contract\bin\测试环境\XJTU.Service.Contract.pdb
+E:\全球鹰\XJTU\XJTU.Service.Contract\bin\测试环境\XJTU.Model.dll
+E:\全球鹰\XJTU\XJTU.Service.Contract\bin\测试环境\XJTU.Model.pdb
+E:\全球鹰\XJTU\XJTU.Service.Contract\obj\测试环境\XJTU.Service.Contract.csprojResolveAssemblyReference.cache
+E:\全球鹰\XJTU\XJTU.Service.Contract\obj\测试环境\XJTU.Service.Contract.dll
+E:\全球鹰\XJTU\XJTU.Service.Contract\obj\测试环境\XJTU.Service.Contract.pdb

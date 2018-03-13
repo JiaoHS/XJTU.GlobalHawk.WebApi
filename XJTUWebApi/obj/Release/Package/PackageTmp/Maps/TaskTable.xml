@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="TaskTable" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <cacheModels>
+    <cacheModel id="TaskTable-cache" implementation="LRU">
+      <flushInterval hours="24"/>
+      <property name="size" value="1000" />
+    </cacheModel>
+  </cacheModels>
+  <alias>
+    <typeAlias alias="TaskTable" type="XJTU.Model.TaskTable,XJTU.Model"></typeAlias>
+  </alias>
+  <resultMaps>
+    <resultMap id="TaskTable-Result" class="TaskTable">
+      <result property="ID" column="ID"/>
+      <result property="Name" column="Name"/>
+      <result property="CreateTime" column="CreateTime"/>
+      <result property="StartTime" column="StartTime"/>
+      <result property="EndTime" column="EndTime"/>
+      <result property="Sensor" column="Sensor"/>
+      <result property="Destination" column="Destination"/>
+      <result property="State" column="State"/>
+    </resultMap>
+  </resultMaps>
+  <statements>
+    <select id="list" parameterClass="hashtable" resultClass="TaskTable">
+      <!--SELECT top #{pageSize} *
+      from Task_10_Result
+      where
+      Time not in (
+      select top #{startIndex} Time from Task_10_Result
+      )
+      order by Time-->
+
+      select *
+      from (select row_number() over(order by tmp.id) as row,*
+      from (select * from TaskTable) tmp) temp
+      where temp.row between #startIndex# and #pageSize#
+
+      <!--SELECT * FROM
+      (
+      SELECT ROW_NUMBER() OVER (ORDER BY Created_Time ASC) AS 'RowNumber', * FROM dbo.COM_UserInfo
+      ) AS UserInfo
+      WHERE RowNumber BETWEEN ( ( ( @pageIndex - 1 ) * @pageSize ) + 1 ) AND ( @pageIndex * @pageSize )-->
+    </select>
+    <insert id="insert" parameterClass="TaskTable" resultClass="int">
+      <![CDATA[insert into dbo.TaskTable(Name,Info,CreateTime,StartTime,EndTime,Sensor,Destination,State) values (#Name#,#Info#,#CreateTime#,#StartTime#,#EndTime#,#Sensor#,#Destination#,#State#)]]>
+      <selectKey type="post" resultClass="int" property="ID" >
+        select @@identity as id
+      </selectKey>
+    </insert>
+  </statements>
+
+</sqlMap>
+

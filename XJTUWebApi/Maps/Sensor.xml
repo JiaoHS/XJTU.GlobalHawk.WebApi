@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Sensor" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <cacheModels>
+    <cacheModel id="Sensor-cache" implementation="LRU">
+      <flushInterval hours="24"/>
+      <property name="size" value="1000" />
+    </cacheModel>
+  </cacheModels>
+  <alias>
+    <typeAlias alias="Sensor" type="XJTU.Model.Sensor,XJTU.Model"></typeAlias>
+  </alias>
+  <resultMaps>
+    <resultMap id="Sensor-Result" class="Sensor">
+      <result property="Id" column="Id"/>
+      <result property="Info" column="Info"/>
+    </resultMap>
+  </resultMaps>
+  <statements>
+    <select id="list" parameterClass="hashtable" resultClass="Sensor">
+      select *
+      from (select row_number() over(order by tmp.ID) as row,*
+      from (select * from SensorList) tmp) temp
+      where temp.row between #startIndex# and #pageSize#
+    </select>
+    <insert id="insert" parameterClass="Sensor" resultClass="int">
+      <![CDATA[insert into dbo.Sensor(Info) values (#Info#)]]>
+      <selectKey type="post" resultClass="int" property="Id" >
+        select @@identity as id
+      </selectKey>
+    </insert>
+  </statements>
+
+</sqlMap>
+
